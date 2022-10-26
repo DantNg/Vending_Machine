@@ -39,16 +39,19 @@ class MomoPayment:
         data = data.encode('utf-8')
         # Post Method 
         req =  request.Request(url, data=data)
-        # Response
-        resp = request.urlopen(req)
-        myJson = resp.read()
-        a = json.loads(myJson)
-        self.log = [a['data'][0]["partnerName"] ,a['data'][0]["amount"],a['data'][0]["clientTime"]]
-        print (self.log)
-        if(a['data'][0]["clientTime"]>= str(self.start_time)  and a['data'][0]["clientTime"] <= str(self.end_time) ):
-            print("Thanh toán thành công !")
-            self.success_payment = True
-            self.log = [a['data'][0]["partnerName"] ,a['data'][0]["amount"],a['data'][0]["clientTime"]] 
+        try:
+            # Response
+            resp = request.urlopen(req)
+            myJson = resp.read()
+            a = json.loads(myJson)
+            self.log = [a['data'][0]["partnerName"] ,a['data'][0]["amount"],a['data'][0]["clientTime"]]
+            print (self.log)
+            if(a['data'][0]["clientTime"]>= str(self.start_time)  and a['data'][0]["clientTime"] <= str(self.end_time) ):
+                print("Thanh toán thành công !")
+                self.success_payment = True
+                self.log = [a['data'][0]["partnerName"] ,a['data'][0]["amount"],a['data'][0]["clientTime"]] 
+        except:
+            print("Mất kết nối với Momo!")
 
 
         

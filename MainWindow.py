@@ -371,10 +371,13 @@ class MainWindow:
             serialData = serialData + str(amount)+':'
         serialData = serialData + "#"
         print (serialData)
-        # hardware = serial.Serial(port='COM4', baudrate=9600, timeout=.1)
-        # while True:
-        #     hardware.write(serialData.encode())
-        #     time.sleep(0.05)
-        #     data = hardware.readline(2)
-        #     if data == 'OK':
-        #         break
+        try:
+            hardware = serial.Serial(port='COM4', baudrate=9600, timeout=.1)
+            while True:
+                hardware.write(serialData.encode())
+                time.sleep(0.05)
+                data = hardware.readline(2)
+                if data == 'OK':
+                    break
+        except:
+            print ("Không thể kết nối với cổng COM!")
