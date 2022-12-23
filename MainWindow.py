@@ -24,7 +24,7 @@ class MainWindow:
         
     def show(self):
         # command to run
-        self.main_win.show()
+        self.main_win.showFullScreen()
     #khởi tạo sự kiện nút nhấn
     def initButtonEvent(self):
         ##      Khung chọn hàng
