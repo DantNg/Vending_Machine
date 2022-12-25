@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1280, 800)
-        Form.setMinimumSize(QtCore.QSize(0, 800))
+        Form.resize(1024, 600)
+        Form.setMinimumSize(QtCore.QSize(0, 0))
         Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -50,7 +50,7 @@ class Ui_Form(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(self.frame_4)
-        self.label.setMaximumSize(QtCore.QSize(450, 500))
+        self.label.setMaximumSize(QtCore.QSize(350, 400))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("img/qr-code.png"))
         self.label.setScaledContents(True)

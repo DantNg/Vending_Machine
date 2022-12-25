@@ -12,7 +12,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1024</width>
     <height>600</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>1000</width>
+    <width>1050</width>
     <height>600</height>
    </size>
   </property>
@@ -5316,7 +5316,7 @@ background-color: rgb(85, 85, 127);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>397</width>
+         <width>421</width>
          <height>598</height>
         </rect>
        </property>

@@ -298,7 +298,7 @@ class MainWindow:
             self.paymentWindow = QtWidgets.QWidget()
             self.uic2 = Ui_Form()
             self.uic2.setupUi(self.paymentWindow)
-            self.paymentWindow.show()
+            self.paymentWindow.showFullScreen()
             self.uic2.cancelPay.clicked.connect(self.closePaymentDialog)
             self.momo = MomoPayment(self.totalCost)
             self.momo.requestQRCode()
